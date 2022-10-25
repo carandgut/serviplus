@@ -1,15 +1,16 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
-//1. conectarnos
+// 1. Conectarse
+
 const conexionDB = () => {
   mongoose
     .connect("mongodb://localhost:27017/serviplus")
     .then(() => {
-      console.log("Se conecto con la base de datos!");
+      console.log("connection successful")
     })
     .catch(() => {
-      console.log("Hubo un error en la conexion!");
-    });
+      console.log("no connection")
+    })
 }
 
-module.exports = conexionDB;
+module.exports = conexionDB
